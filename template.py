@@ -1,7 +1,4 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 import os
 from pathlib import Path
 import logging
@@ -28,14 +25,14 @@ list_of_files = [
     "Dockerfile",
     "requirements.txt",
     "setup.py",
-    "research/trails.ipynb"
+    "research/trails.ipynb",
 ]
 
 for filepath in list_of_files:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
 
-    if filedir != "":
+    if filedir!= "":
         os.makedirs(filedir, exist_ok=True)
         logging.info(f"Created directory: {filedir} for the file {filename}")
 
